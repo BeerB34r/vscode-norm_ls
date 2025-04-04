@@ -1,0 +1,33 @@
+{
+  "name": "norm_ls",
+  "description": "Norminette in a language server",
+  "author": "Mats de Beer | BeerB34r",
+  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "publisher": "Mats de Beer",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "activationEvents": [
+    "onLanguage:c"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "c",
+        "aliases": [
+          "c",
+          "C"
+        ],
+        "extensions": [
+          ".c",
+          ".h"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^8.1.0"
+  }
+}
