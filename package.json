@@ -1,5 +1,5 @@
 {
-  "name": "norm_ls",
+  "name": "norm-ls",
   "description": "Norminette in a language server",
   "author": "Mats de Beer | BeerB34r",
   "license": "GPL-3.0-only",
@@ -29,10 +29,12 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "install": "python3 -m pip install 'pygls>=2.0.0a2'"
+    "vscode:prepublish": "npm install --production",
+    "package": "vsce package --no-dependencies",
+    "install": "pip install 'pygls>=2.0.0a2'"
   },
   "dependencies": {
+    "@vscode/vsce": "^3.3.2",
     "vscode-languageclient": "^8.1.0"
   }
 }
