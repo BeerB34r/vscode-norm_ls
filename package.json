@@ -2,9 +2,10 @@
   "name": "norm_ls",
   "description": "Norminette in a language server",
   "author": "Mats de Beer | BeerB34r",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "version": "1.0.0",
   "publisher": "Mats de Beer",
+  "repository": "https://github.com/BeerB34r/vscode-norm_ls",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -26,6 +27,10 @@
         ]
       }
     ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "install": "python3 -m pip install 'pygls>=2.0.0a2'"
   },
   "dependencies": {
     "vscode-languageclient": "^8.1.0"
